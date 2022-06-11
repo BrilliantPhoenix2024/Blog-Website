@@ -7,7 +7,11 @@ def home_page_view(request):
 
 
 def about_page_view(request):
-    return render(request, 'pages/about.html')
+    context = {
+        'page_name': 'about',
+        'description': 'this is s.th said in context',
+    }
+    return render(request, 'pages/about.html', context)
 
 
 def contact_page_view(request):
