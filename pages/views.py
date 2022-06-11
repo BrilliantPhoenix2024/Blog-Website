@@ -16,5 +16,8 @@ def about_page_view(request):
 
 
 def contact_page_view(request):
-    return render(request, 'contact_page_view')
+    return render(request, 'pages/contact.html')
+
+
+
 
