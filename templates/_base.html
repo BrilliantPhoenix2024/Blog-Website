@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>{% block page_title %}{% endblock page_title%}</title>
 </head>
 <body>
-$END$
+<a href="/">home page</a>
+<a href="/about">about page</a>
+<a href="/contact">CONTACT page</a>
+{% block content %}
+
+
+{% endblock content %}
 </body>
 </html>

@@ -10,6 +10,7 @@ def about_page_view(request):
     context = {
         'page_name': 'about',
         'description': 'this is s.th said in context',
+        'button_value': "Dont click",
     }
     return render(request, 'pages/about.html', context)
 
