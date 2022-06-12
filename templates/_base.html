@@ -5,12 +5,14 @@
     <title>{% block page_title %}{% endblock page_title%}</title>
 </head>
 <body>
-<a href="/">home page</a>
-<a href="/about">about page</a>
-<a href="/contact">CONTACT page</a>
-{% block content %}
+    <a href="{% url 'home' %}">home page</a>
+    <a href="{% url 'about' %}">about page</a>
+    <a href="{% url 'contact' %}">contact page</a>
 
+    <h3>{% block page_h1 %}{% endblock page_h1 %}</h3>
 
-{% endblock content %}
+    {% block content %}
+
+    {% endblock content %}
 </body>
 </html>
