@@ -1,10 +1,51 @@
 {% extends '_base.html' %}
 
 
+
 {% block page_title %}Home page{% endblock page_title %}
 {#<h1>{% block page_h1 %}this is home page{% endblock page_h1 %}</h1>#}
 
 {% block content %}
+{#    <div class="main">#}
+        <div class="content">
+            <h1>Web design development</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Adipisci recusandae eos suscipit rerum
+                mollitia
+                quae <br> corrupti qui excepturi repudiandae officiis at, et <br> provident quam, ipsum necessitatibus
+                eveniet. <br> Soluta, fugit in.</p>
 
+            <div class="form">
+                <H2>LOGIN HERE</H2>
+                <input type="email" name="EMAIL" placeholder="Enter email here">
+                <input type="password" name="PASSWORD" id="" placeholder="Enter password here">
+                <button class="button"><a href="">Login</a></button>
+
+                <p class="link">Donot have an account
+                    <br>
+                    <a class="sgn" href="">SIGN UP</a> HERE</p>
+                <p class="lwi">Log in with</p>
+
+                <div class="social">
+                    <a href="">
+                        <ion-icon name="logo-facebook"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-instagram"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-twitter"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-google"></ion-icon>
+                    </a>
+                    <a href="">
+                        <ion-icon name="logo-skype"></ion-icon>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+{#    </div>#}
 
 {% endblock content %}

@@ -1,40 +1,44 @@
-<!DOCTYPE html>
+{% load static %}
+
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{% block page_title %}{% endblock page_title%}</title>
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block page_title %}{% endblock page_title %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
-{#    <h3>{% block page_h1 %}{% endblock page_h1 %}</h3>#}
-
-    <div class="main">
-        <div class="navbar">
-            <div class="icon">
-                <h2 class="logo">CLASSY</h2>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="{% url 'home' %}">HOME</a></li>
-                    <li><a href="{% url 'about' %}">ABOUT</a></li>
-                    <li><a href="">SERVICE</a></li>
-                    <li><a href="">DESIGN</a></li>
-                    <li><a href="{% url 'contact' %}">CONTACT</a></li>
-                </ul>
-            </div>
-            <div class="search">
-                <input class="srch" type="search" placeholder="search">
-                <a href="">
-                    <button class="btn">search</button>
-                </a>
-            </div>
-
+<div class="main">
+    <div class="navbar">
+        <div class="icon">
+            <h2 class="logo">CLASSY</h2>
         </div>
+        <div class="menu">
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="">SERVICE</a></li>
+                <li><a href="">DESIGN</a></li>
+                <li><a href="{% url 'contact' %}">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input class="srch" type="search" placeholder="search">
+            <a href="">
+                <button class="btn">search</button>
+            </a>
+        </div>
+
     </div>
+</div>
 
-    {% block content %}
+{% block content %}
 
-    {% endblock content %}
+{% endblock content %}
 </body>
 </html>
+

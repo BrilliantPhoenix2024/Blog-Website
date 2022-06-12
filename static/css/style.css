@@ -6,7 +6,7 @@
 .main{
     width: 100%;
     height: 100vh;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(/img/nightcity.jpg);
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(../img/nightcity.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -108,7 +108,7 @@ ul>li>a:hover{
     letter-spacing: 1.2px;
     left: 0;
     position: absolute;
-    top : 390px;
+    top : -270px;
 }
 .content>h1{
     font-family: 'Times New Roman';
@@ -117,13 +117,13 @@ ul>li>a:hover{
     letter-spacing: 2px;
     left: 0;
     position: absolute;
-    top : 330px;
+    top : -330px;
 }
 .form{
     width: 310px;
     height: 230px;
     position: absolute;
-    top: 310px;
+    top: -390px;
     left: 870px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2)50%, rgba(0, 0, 0, 0.3)50%);
     border-radius: 10px;
