@@ -16,16 +16,18 @@
 
             <div class="form">
                 <H2>LOGIN HERE</H2>
-                <form action='/accounts/login/' method='post'>
+
+                <form action="/accounts/login/" method="post">
                     {% csrf_token %}
                     <div>
                         <label for='username'> Username </label>
-                        <input type='text' name='Username' id='username'>
+                        <input type='text' name='username' id='username'>
                         <label for='password'>Password </label>
-                        <input type='password' name='Password' id='password'>
+                        <input type='password' name='password' id='password'>
                         <input type='submit' value='login'>
                     </div>
                 </form>
+
 
                 <p class="link">Donot have an account
                     <br>
