@@ -19,5 +19,16 @@ def contact_page_view(request):
     return render(request, 'pages/contact.html')
 
 
+def design_page_view(request):
+    return render(request, 'pages/design.html')
+
+
+def services_page_view(request):
+    return render(request, 'pages/services.html')
+
+
+
+
+
 
 

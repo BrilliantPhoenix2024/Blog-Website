@@ -16,17 +16,13 @@
 
             <div class="form">
                 <H2>LOGIN HERE</H2>
-                <form action='/accounts/login/' method='post'>
+                <form action="" method="post" >
                     {% csrf_token %}
-                    <div>
-                        <label for='username'> Username </label>
-                        <input type='text' name='Username' id='username'>
-                        <label for='password'>Password </label>
-                        <input type='password' name='Password' id='password'>
-                        <input type='submit' value='login'>
-                    </div>
+                    {{ form.as_p }}
+{#                    <input type=text name="username" placeholder="Enter username here">#}
+{#                    <input type="password" name="PASSWORD" id="" placeholder="Enter password here">#}
+                    <button type="submit">login</button>
                 </form>
-
                 <p class="link">Donot have an account
                     <br>
                     <a class="sgn" href="">SIGN UP</a> HERE</p>
