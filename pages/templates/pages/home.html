@@ -3,7 +3,7 @@
 
 
 {% block page_title %}Home page{% endblock page_title %}
-{#<h1>{% block page_h1 %}this is home page{% endblock page_h1 %}</h1>#}
+<h1>{% block page_h1 %}this is home page{% endblock page_h1 %}</h1>
 
 {% block content %}
 {#    <div class="main">#}
@@ -14,47 +14,48 @@
                 quae <br> corrupti qui excepturi repudiandae officiis at, et <br> provident quam, ipsum necessitatibus
                 eveniet. <br> Soluta, fugit in.</p>
 
-            <div class="form">
-                <H2>LOGIN HERE</H2>
-
-                <form action="/accounts/login/" method="post">
-                    {% csrf_token %}
-                    <div>
-                        <label for='username'> Username </label>
-                        <input type='text' name='username' id='username'>
-                        <label for='password'>Password </label>
-                        <input type='password' name='password' id='password'>
-                        <input type='submit' value='login'>
-                    </div>
-                </form>
-
-
-                <p class="link">Donot have an account
-                    <br>
-                    <a class="sgn" href="">SIGN UP</a> HERE</p>
-                <p class="lwi">Log in with</p>
-
-                <div class="social">
-                    <a href="">
-                        <ion-icon name="logo-facebook"></ion-icon>
-                    </a>
-                    <a href="">
-                        <ion-icon name="logo-instagram"></ion-icon>
-                    </a>
-                    <a href="">
-                        <ion-icon name="logo-twitter"></ion-icon>
-                    </a>
-                    <a href="">
-                        <ion-icon name="logo-google"></ion-icon>
-                    </a>
-                    <a href="">
-                        <ion-icon name="logo-skype"></ion-icon>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-{#    </div>#}
+{#            <div class="form">#}
+{#                <H2>LOGIN HERE</H2>#}
+{##}
+{#                <form action="/accounts/login/" method="post">#}
+{#                    {% csrf_token %}#}
+{#                    <div>#}
+{#                        <label for='username'> Username </label>#}
+{#                        <input type='text' name='username' id='username'>#}
+{#                        <label for='password'>Password </label>#}
+{#                        <input type='password' name='password' id='password'>#}
+{#                        <button type="submit" class="button">Login</button>#}
+{#                        <input type='submit' value='login'>#}
+{#                    </div>#}
+{#                </form>#}
+{##}
+{##}
+{#                <p class="link">Donot have an account#}
+{#                    <br>#}
+{#                    <a class="sgn" href="">SIGN UP</a> HERE</p>#}
+{#                <p class="lwi">Log in with</p>#}
+{##}
+{#                <div class="social">#}
+{#                    <a href="">#}
+{#                        <ion-icon name="logo-facebook"></ion-icon>#}
+{#                    </a>#}
+{#                    <a href="">#}
+{#                        <ion-icon name="logo-instagram"></ion-icon>#}
+{#                    </a>#}
+{#                    <a href="">#}
+{#                        <ion-icon name="logo-twitter"></ion-icon>#}
+{#                    </a>#}
+{#                    <a href="">#}
+{#                        <ion-icon name="logo-google"></ion-icon>#}
+{#                    </a>#}
+{#                    <a href="">#}
+{#                        <ion-icon name="logo-skype"></ion-icon>#}
+{#                    </a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{#        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>#}
+    </div>
 
 {% endblock content %}

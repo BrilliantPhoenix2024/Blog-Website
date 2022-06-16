@@ -32,6 +32,13 @@
                 <button class="btn">search</button>
             </a>
         </div>
+        <div class="wel">
+            {% if user.is_authenticated %}
+                Wellcome {{ user.username }}
+            {% else %}
+                <a href="{% url 'login' %}" style="color: whitesmoke">login</a>
+            {% endif %} 
+        </div>
 
     </div>
 </div>
