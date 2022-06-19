@@ -34,18 +34,19 @@
         </div>
         <div class="wel">
             {% if user.is_authenticated %}
-                Wellcome {{ user.username }}
+                Wellcome {{ user.username }} | <a href="{% url 'logout' %}" style="color: whitesmoke">logout</a>
             {% else %}
-                <a href="{% url 'login' %}" style="color: whitesmoke">login</a>
+                <a href="{% url 'login' %}" style="color: whitesmoke;margin-left: 65px;">login</a>
             {% endif %} 
         </div>
 
     </div>
-</div>
 
+</div>
 {% block content %}
 
 {% endblock content %}
+
 </body>
 </html>
 

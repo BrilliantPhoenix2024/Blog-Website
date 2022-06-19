@@ -97,12 +97,13 @@ ul>li>a:hover{
 .wel{
      width: 280px;
      float: left;
-    margin-left: 270px;
+    margin-left: 260px;
     color: whitesmoke;
     position: absolute;
     top: 25px;
     left: 1010px;
-    font-weight: normal;
+    font-size: 14px;
+    font-weight: bold;
     font-family: Arial;
 }
 .content{

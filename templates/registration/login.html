@@ -2,7 +2,7 @@
 
 
 
-{% block page_title %}Home page{% endblock page_title %}
+{% block page_title %}Signup page{% endblock page_title %}
 {#<h1>{% block page_h1 %}this is home page{% endblock page_h1 %}</h1>#}
 
 {% block content %}
@@ -23,14 +23,14 @@
                         <input type='text' name='username' id='username'>
                         <label for='password'>Password </label>
                         <input type='password' name='password' id='password'>
-                        <button type="submit" class="button">Login</button>
+                        <button type="submit" class="button">signup</button>
 {#                        <input type='submit' value='login'>#}
                     </div>
                 </form>
 
                 <p class="link">Donot have an account
                     <br>
-                    <a class="sgn" href="">SIGN UP</a> HERE</p>
+                    <a class="sgn" href="{% url 'signup' %}">SIGN UP</a> HERE</p>
                 <p class="lwi">Log in with</p>
 
                 <div class="social">
