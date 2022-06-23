@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import My_design
 
 
 def home_page_view(request):
@@ -7,12 +7,7 @@ def home_page_view(request):
 
 
 def about_page_view(request):
-    context = {
-        'page_name': 'about',
-        'description': 'this is s.th said in context',
-        'button_value': "Dont click",
-    }
-    return render(request, 'pages/about.html', context)
+    return render(request, 'pages/about.html')
 
 
 def contact_page_view(request):
@@ -20,7 +15,8 @@ def contact_page_view(request):
 
 
 def design_page_view(request):
-    return render(request, 'pages/design.html')
+    designs_list = My_design.objects.all()
+    return render(request, 'pages/design.html', {'designs_list': designs_list})
 
 
 def services_page_view(request):
