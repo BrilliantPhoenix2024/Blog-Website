@@ -5,19 +5,20 @@
 <h1>{% block page_h1 %}this my {{ page_name }} page {% endblock page_h1 %}</h1>
 
 {% block content %}
-    <div class="container" style=" width: 73%;height: auto;
+ <div class="container" style=" width: 73%;height: auto;
     position: absolute;top: 100px;left: 180px;color: whitesmoke;
     font-size: larger;font-family: Arial;font-weight: bold;
     border: 3px solid goldenrod;border-radius: 8px">
-
         {% for design in designs_list %}
-            {{ design.title }}
-            <br>
-            {{ design.author }}
-            <br>
-            {{ design.description }}
-            <p>----------------------------------</p>
+            <div class="card" style="width: fit-content;height: fit-content;text-align: center;margin-left: 40%;border-bottom: 1px dotted goldenrod;margin-bottom: 20px">
+                {{ design.title }}
+                <br>
+                {{ design.author }}
+                <br>
+                {{ design.description }}
+            </div>
         {% endfor %}
-
     </div>
+
+
 {% endblock content %}
