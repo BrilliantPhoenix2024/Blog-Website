@@ -10,15 +10,13 @@
     font-size: larger;font-family: Arial;font-weight: bold;
     border: 3px solid goldenrod;border-radius: 8px">
         {% for design in designs_list %}
-            <div class="card" style="width: fit-content;height: fit-content;text-align: center;margin-left: 40%;border-bottom: 1px dotted goldenrod;margin-bottom: 20px">
-                {{ design.title }}
-                <br>
-                {{ design.author }}
-                <br>
-                {{ design.description }}
+            <div class="card" style="width: auto;height: fit-content;text-align: center;margin: 3%;border: 1px dotted goldenrod;">
+{#                {{ design.id }}#}
+                <h1>{{ design.title }}</h1>
+                <h3>{{ design.author }}</h3>
+                <h5>{{ design.description }}</h5>
+                <a href="{% url 'services' design.id %}"><button type="submit">read more</button></a>
             </div>
         {% endfor %}
     </div>
-
-
 {% endblock content %}

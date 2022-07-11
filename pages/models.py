@@ -15,8 +15,3 @@ class My_design(models.Model):
 
     def __str__(self):
         return self.title
-
-
-
-
-
