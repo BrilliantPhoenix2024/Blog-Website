@@ -13,8 +13,8 @@
             <div class="card" style="width: auto;height: fit-content;text-align: center;margin: 3%;border: 1px dotted goldenrod;">
 {#                {{ design.id }}#}
                 <h1>{{ design.title }}</h1>
-                <h3>{{ design.author }}</h3>
-                <h5>{{ design.description }}</h5>
+                <h4>{{ design.author }}</h4>
+                <h6>{{ design.description }}</h6>
                 <a href="{% url 'services' design.id %}"><button type="submit">read more</button></a>
             </div>
         {% endfor %}
