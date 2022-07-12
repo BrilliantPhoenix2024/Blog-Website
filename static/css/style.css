@@ -42,7 +42,7 @@ ul{
 }
 ul>li{
     list-style: none;
-    margin-left: 50px;
+    margin-left: 66px;
     margin-top: 27px;
     font-size: 14px;
 }
@@ -59,7 +59,7 @@ ul>li>a:hover{
 .search{
     width: 300px;
     float: left;
-    margin-left: 210px;
+    margin-left: 190px;
 
 }
 .srch{
@@ -97,7 +97,7 @@ ul>li>a:hover{
 .wel{
      width: 280px;
      float: left;
-    margin-left: 260px;
+    margin-left: 243px;
     color: whitesmoke;
     position: absolute;
     top: 25px;

@@ -7,15 +7,15 @@
 {% block content %}
  <div class="container" style=" width: 73%;height: auto;
     position: absolute;top: 100px;left: 180px;color: whitesmoke;
-    font-size: larger;font-family: Arial;font-weight: bold;
+    font-size: medium;font-family: Arial;font-weight: bold;
     border: 3px solid goldenrod;border-radius: 8px">
         {% for design in designs_list %}
             <div class="card" style="width: auto;height: fit-content;text-align: center;margin: 3%;border: 1px dotted goldenrod;">
 {#                {{ design.id }}#}
                 <h1>{{ design.title }}</h1>
                 <h4>{{ design.author }}</h4>
-                <h6>{{ design.description }}</h6>
-                <a href="{% url 'services' design.id %}"><button type="submit">read more</button></a>
+                <h5>{{ design.description }}</h5>
+                <a href="{% url 'detail_design' design.id %}"><button type="submit">read more</button></a>
             </div>
         {% endfor %}
     </div>

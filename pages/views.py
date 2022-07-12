@@ -21,9 +21,9 @@ def design_page_view(request):
     return render(request, 'pages/design.html', {'designs_list': designs_list})
 
 
-def services_page_view(request, pk):
+def detail_design_page_view(request, pk):
     my_design = get_object_or_404(My_design, pk=pk)
-    return render(request, 'pages/services.html', {'my_design': my_design})
+    return render(request, 'pages/detail_design.html', {'my_design': my_design})
 
 
 
