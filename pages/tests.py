@@ -11,7 +11,13 @@ class MyDesignTest(TestCase):
        self.my_design1 = My_design.objects.create(
            title='Design1',
            description='this is some text for Design1',
-           status='My_design.STATUS_CHOICES[0]',
+           status=My_design.STATUS_CHOICES[0][0], #published
+           author=self.user,
+       )
+       self.my_design2 = My_design.objects.create(
+           title='Design2',
+           description='this is some text for Design2',
+           status=My_design.STATUS_CHOICES[1][0], #draft
            author=self.user,
        )
 
@@ -56,7 +62,10 @@ class MyDesignTest(TestCase):
        response = self.client.get(reverse('services', args=[999]))
        self.assertEqual(response.status_code, 404)
 
-
+   def test_draft_design_not_show_in_design_list(self):
+       response = self.client.get(reverse('design'))
+       self.assertContains(response, self.my_design1.title)
+       self.assertNotContains(response, self.my_design2.title)
 
 
 

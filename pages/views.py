@@ -16,7 +16,8 @@ def contact_page_view(request):
 
 
 def design_page_view(request):
-    designs_list = My_design.objects.all()
+    # designs_list = My_design.objects.all()
+    designs_list = My_design.objects.filter(status='pub')
     return render(request, 'pages/design.html', {'designs_list': designs_list})
 
 
