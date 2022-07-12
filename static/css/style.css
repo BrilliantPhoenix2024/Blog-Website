@@ -226,3 +226,112 @@ div>input:focus{
 .social ion-icon:hover{
     color: goldenrod;
 }
+/*#contact{*/
+/*    width: 90%;*/
+/*    height: auto;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    background-color: rgb(190, 187, 187);*/
+/*    color: whitesmoke;*/
+/*    padding: 20px;*/
+/*    box-sizing: border-box;*/
+/*}*/
+.form{
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: -10px;
+    left: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+    box-sizing: border-box;
+   /* background-color: black;*/
+}
+.input{
+    padding: 12px;
+    margin: 15px;
+    width: 50%;
+    border: 2px solid goldenrod;
+    outline: 1px;
+    /*background-color: whitesmoke;*/
+    color: white;
+}
+#msg{
+    width: 50%;
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid goldenrod;
+    outline: 1px;
+    /*background-color: whitesmoke;*/
+}
+#send{
+    padding: 10px;
+    width: 15%;
+    margin: 30px;
+    border: none;
+    outline: none;
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+
+}
+#send:hover{
+    box-shadow: 0 0 10px goldenrod;
+}
+.name{
+    position: absolute;
+    top: 50px;
+    left: 5%;
+}
+.email{
+    position: absolute;
+    top: 120px;
+    left: 5%;
+}
+.comment{
+    position: absolute;
+    top: 193px;
+    left: 5%;
+    font-size: 15px;
+}
+.about{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: whitesmoke;
+    position: relative;
+    /*float: left;*/
+}
+.about>.p1{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    line-height: 32px;
+    letter-spacing: 1.2px;
+    left: 0;
+    position: absolute;
+    top : -300px;
+    float: left;
+}
+.about>.p2{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    line-height: 32px;
+    letter-spacing: 1.2px;
+    left: 700px;
+    position: absolute;
+    top : -300px;
+    float: left;
+}
+.about>h1{
+    font-family: 'Times New Roman';
+    font-size: 35px;
+    padding-left: 20px;
+    letter-spacing: 2px;
+    left: 375px;
+    position: absolute;
+    top : -370px;
+}
