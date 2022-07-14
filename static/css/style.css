@@ -304,6 +304,11 @@ div>input:focus{
     top: 50px;
     left: 5%;
 }
+.title{
+    position: absolute;
+    top: 50px;
+    left: 5%;
+}
 .email{
     position: absolute;
     top: 120px;

@@ -11,8 +11,8 @@
     border: 3px solid goldenrod;border-radius: 8px">
         <form action="" class="form" method="POST">
             {% csrf_token %}
-            <label class="name" for="author_name">Enter your name:</label>
-            <input type="text" name="name" class="input">
+            <label class="title" for="author_name">Enter your title:</label>
+            <input type="text" name="title" class="input">
             <label class="description" for="comment_text">Enter your description:</label>
             <textarea name="des" id="des" cols="30" rows="10"></textarea>
             <input type="submit" value="SEND" id="send">
