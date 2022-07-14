@@ -26,6 +26,12 @@ def detail_design_page_view(request, pk):
     return render(request, 'pages/detail_design.html', {'my_design': my_design})
 
 
+def create_design_page_view(request):
+    return render(request, 'pages/create_design.html')
+
+
+
+
 
 
 

@@ -8,5 +8,6 @@ urlpatterns = [
     path('contact/', views.contact_page_view, name='contact'),
     path('design/', views.design_page_view, name='design'),
     path('<int:pk>/', views.detail_design_page_view, name='detail_design'),
+    path('create/', views.create_design_page_view, name='create_design'),
 ]
 

@@ -42,7 +42,7 @@ ul{
 }
 ul>li{
     list-style: none;
-    margin-left: 66px;
+    margin-left: 50px;
     margin-top: 27px;
     font-size: 14px;
 }
@@ -59,8 +59,7 @@ ul>li>a:hover{
 .search{
     width: 300px;
     float: left;
-    margin-left: 190px;
-
+    margin-left: 211px;
 }
 .srch{
     font-family: 'Times New Roman';
@@ -132,6 +131,16 @@ ul>li>a:hover{
     position: absolute;
     top : -330px;
 }
+.form_login{
+    width: 310px;
+    height: 230px;
+    position: absolute;
+    top: -410px;
+    left: 870px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2)50%, rgba(0, 0, 0, 0.3)50%);
+    border-radius: 10px;
+    padding: 25px;
+}
 .form{
     width: 310px;
     height: 230px;
@@ -142,7 +151,7 @@ ul>li>a:hover{
     border-radius: 10px;
     padding: 25px;
 }
-.form>h2{
+.form_login>h2{
     width: 220px;
     font-family: sans-serif;
     text-align: center;
@@ -150,7 +159,7 @@ ul>li>a:hover{
     color: goldenrod;
     font-size: 22px;
     border-radius: 10px;
-    margin: 2px;
+    margin: 7px;
     padding: 8px;
 }
 div>input{
@@ -196,7 +205,7 @@ div>input:focus{
     color: black;
     font-weight: bold;
 }
-.form>.link{
+.form_login>.link{
     font-family: Arial;
     font-size: 15px;
     padding-top: 10px;
@@ -226,16 +235,6 @@ div>input:focus{
 .social ion-icon:hover{
     color: goldenrod;
 }
-/*#contact{*/
-/*    width: 90%;*/
-/*    height: auto;*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    background-color: rgb(190, 187, 187);*/
-/*    color: whitesmoke;*/
-/*    padding: 20px;*/
-/*    box-sizing: border-box;*/
-/*}*/
 .form{
     width: 70%;
     height: auto;
@@ -255,8 +254,15 @@ div>input:focus{
     width: 50%;
     border: 2px solid goldenrod;
     outline: 1px;
-    /*background-color: whitesmoke;*/
+    background-color: transparent;
     color: white;
+}
+.input:focus{
+    outline: none;
+}
+::placeholder{
+    font-family: Arial;
+    color: whitesmoke;
 }
 #msg{
     width: 50%;
@@ -264,18 +270,31 @@ div>input:focus{
     margin: 15px;
     border: 2px solid goldenrod;
     outline: 1px;
-    /*background-color: whitesmoke;*/
+     background-color: transparent;
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+#des{
+    width: 50%;
+    padding: 10px;
+    margin: 15px;
+    border: 2px solid goldenrod;
+    outline: 1px;
+    background-color: transparent;
+    color: whitesmoke;
+    font-family: sans-serif;
+    font-size: 15px;
 }
 #send{
     padding: 10px;
     width: 15%;
-    margin: 30px;
+    margin: 16px;
     border: none;
     outline: none;
     color: black;
     font-weight: bold;
     border: 1px solid black;
-
 }
 #send:hover{
     box-shadow: 0 0 10px goldenrod;
@@ -289,6 +308,12 @@ div>input:focus{
     position: absolute;
     top: 120px;
     left: 5%;
+}
+.description{
+    position: absolute;
+    top: 120px;
+    left: 5%;
+    font-size: 14px;
 }
 .comment{
     position: absolute;
