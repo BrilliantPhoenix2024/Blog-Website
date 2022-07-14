@@ -1,6 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from .models import My_design
 from django.shortcuts import get_object_or_404
+from django.contrib.auth.models import User
+from .forms import NewDesignForm
 
 
 def home_page_view(request):
@@ -27,8 +29,27 @@ def detail_design_page_view(request, pk):
 
 
 def create_design_page_view(request):
+    if request.method == 'POST':
+        form = NewDesignForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form = NewDesignForm()
+            return redirect('design')
 
-    return render(request, 'pages/create_design.html')
+    else:  # GET request
+        form = NewDesignForm()
+
+    return render(request, 'pages/create_design.html', context={'form': form})
+
+    # if request.method == 'POST':
+    #     design_title = request.POST.get('title')
+    #     design_description = request.POST.get('des')
+    #
+    #     user = User.objects.all()[0] #django ORM
+    #     My_design.objects.create(title=design_title, description=design_description, author=user, status='pub')
+    # else:
+    #     print('GET request')
+    # return render(request, 'pages/create_design.html')
 
 
 

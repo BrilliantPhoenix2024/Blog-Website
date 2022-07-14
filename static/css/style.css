@@ -248,6 +248,19 @@ div>input:focus{
     box-sizing: border-box;
    /* background-color: black;*/
 }
+.design_form{
+    width: 70%;
+    height: auto;
+    position: absolute;
+    top: 90px;
+    left: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0px;
+    box-sizing: border-box;
+   /* background-color: black;*/
+}
 .input{
     padding: 12px;
     margin: 15px;
@@ -287,17 +300,30 @@ div>input:focus{
     font-size: 15px;
 }
 #send{
-    padding: 10px;
-    width: 15%;
-    margin: 16px;
+    /*padding: 10px;*/
+    /*width: 15%;*/
+    /*margin: 16px;*/
+    /*border: none;*/
+    /*outline: none;*/
+    /*color: black;*/
+    /*font-weight: bold;*/
+    /*border: 1px solid black;*/
+    width: 240px;
+    height: 40px;
+    background-color: goldenrod;
     border: none;
-    outline: none;
-    color: black;
+    margin-top: 16px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: whitesmoke;
+    transition: 0.4s ease;
     font-weight: bold;
-    border: 1px solid black;
 }
 #send:hover{
-    box-shadow: 0 0 10px goldenrod;
+    /*box-shadow: 0 0 10px goldenrod;*/
+     background-color: whitesmoke;
+    color: goldenrod;
 }
 .name{
     position: absolute;
