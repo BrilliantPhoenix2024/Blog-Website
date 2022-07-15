@@ -40,7 +40,6 @@ def create_design_page_view(request):
         form = NewDesignForm()
 
     return render(request, 'pages/create_design.html', context={'form': form})
-
     # if request.method == 'POST':
     #     design_title = request.POST.get('title')
     #     design_description = request.POST.get('des')
@@ -50,6 +49,17 @@ def create_design_page_view(request):
     # else:
     #     print('GET request')
     # return render(request, 'pages/create_design.html')
+
+def design_update_view(request, pk):
+    design = get_object_or_404(My_design, pk=pk)
+    form = NewDesignForm(request.POST or None, instance=design)
+
+    if form.is_valid():
+        form.save()
+
+    return render(request, 'pages/create_design.html', context={'form': form})
+
+
 
 
 
