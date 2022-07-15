@@ -10,13 +10,13 @@
     font-size: medium;font-family: Arial;font-weight: bold;
     border: 3px solid goldenrod;border-radius: 8px">
         {% for design in designs_list %}
-            <div class="card" style="width: auto;height: fit-content;text-align: center;margin: 3%;border: 1px dotted goldenrod;">
+            <div class="card" style="width: auto;height: fit-content;text-align: center;margin: 1%;border: 1px dotted goldenrod;">
 {#                {{ design.id }}#}
                 <h1>{{ design.title }}</h1>
-                <h4>{{ design.author }}</h4>
+                <h5>created by: {{ design.author }}</h5>
+                <br>
                 <h5>{{ design.description }}</h5>
-                <a href="{% url 'detail_design' design.id %}"><button type="submit">read more</button></a>
-                <a href="{% url 'design_update' design.id %}"><button type="submit">Edit</button></a>
+                <a href="{% url 'detail_design' design.id %}"><button type="submit" class="b-read-more" >read more</button></a>
             </div>
         {% endfor %}
     </div>

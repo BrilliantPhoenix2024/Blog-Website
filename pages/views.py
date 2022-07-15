@@ -61,6 +61,17 @@ def design_update_view(request, pk):
     return render(request, 'pages/create_design.html', context={'form': form})
 
 
+def design_delete_view(request, pk):
+    design = get_object_or_404(My_design, pk=pk)
+
+    if request.method == 'POST':
+        design.delete()
+        return redirect('design')
+
+    return render(request, 'pages/delete_design.html', context={'design': design})
+
+
+
 
 
 

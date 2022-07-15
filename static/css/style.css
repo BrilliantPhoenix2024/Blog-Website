@@ -283,7 +283,7 @@ div>input:focus{
     margin: 15px;
     border: 2px solid goldenrod;
     outline: 1px;
-     background-color: transparent;
+    background-color: transparent;
     color: whitesmoke;
     font-family: sans-serif;
     font-size: 15px;
@@ -322,7 +322,7 @@ div>input:focus{
 }
 #send:hover{
     /*box-shadow: 0 0 10px goldenrod;*/
-     background-color: whitesmoke;
+    background-color: whitesmoke;
     color: goldenrod;
 }
 .name{
@@ -390,4 +390,21 @@ div>input:focus{
     left: 375px;
     position: absolute;
     top : -370px;
+}
+.b-read-more{
+    background-color: cornflowerblue;
+    border-radius: 2px;
+}
+.b-Edit{
+    background-color: yellow;
+    border-radius: 2px;
+    font-size: 20px;
+}
+.b-DELETE{
+    background-color: crimson;
+    border-radius: 2px;
+     font-size: 20px;
+}
+.b-DELETE:hover{
+   color: goldenrod;
 }

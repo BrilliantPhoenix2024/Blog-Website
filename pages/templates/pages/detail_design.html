@@ -10,11 +10,18 @@
     font-size: larger;font-family: Arial;font-weight: normal;
     border: 3px solid goldenrod;border-radius: 8px;">
         <div class="box"
-             style="width: auto;height: 400px;text-align: center;margin: 3%;border: 1px dotted goldenrod;">
+             style="width: auto;height: 485px;text-align: center;position: relative;top: 40px">
             <h1>{{ my_design.title }}</h1>
-            <h4>{{ my_design.author }}</h4>
+            <h5>created by: {{ my_design.author }}</h5>
             <br>
             <h3>{{ my_design.description }}</h3>
+            <br>
+            <a href="{% url 'design_update' my_design.id %}">
+                <button type="submit" class="b-Edit">Edit</button>
+            </a>
+            <a href="{% url 'design_delete' my_design.id %}">
+                <button type="submit" class="b-DELETE">DELETE</button>
+            </a>
         </div>
 {#        <div class="comment" style="width: auto;height: fit-content;text-align: center;margin: 3%;border: 1px dotted goldenrod;">#}
 {#            <h3>leave a comment please</h3>#}
