@@ -16,6 +16,7 @@
                 <h4>{{ design.author }}</h4>
                 <h5>{{ design.description }}</h5>
                 <a href="{% url 'detail_design' design.id %}"><button type="submit">read more</button></a>
+                <a href="{% url 'design_update' design.id %}"><button type="submit">Edit</button></a>
             </div>
         {% endfor %}
     </div>

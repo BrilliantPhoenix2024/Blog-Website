@@ -19,7 +19,7 @@ def contact_page_view(request):
 
 def design_page_view(request):
     # designs_list = My_design.objects.all()
-    designs_list = My_design.objects.filter(status='pub')
+    designs_list = My_design.objects.filter(status='pub').order_by('-datetime_modified')
     return render(request, 'pages/design.html', {'designs_list': designs_list})
 
 
@@ -56,6 +56,7 @@ def design_update_view(request, pk):
 
     if form.is_valid():
         form.save()
+        return redirect('design')
 
     return render(request, 'pages/create_design.html', context={'form': form})
 
