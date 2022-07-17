@@ -70,15 +70,20 @@ class DesignCreateView(generic.CreateView):
     form_class = NewDesignForm
     template_name = 'pages/create_design.html'
 
-def design_update_view(request, pk):
-    design = get_object_or_404(My_design, pk=pk)
-    form = NewDesignForm(request.POST or None, instance=design)
+# def design_update_view(request, pk):
+#     design = get_object_or_404(My_design, pk=pk)
+#     form = NewDesignForm(request.POST or None, instance=design)
+#
+#     if form.is_valid():
+#         form.save()
+#         return redirect('design')
+#
+#     return render(request, 'pages/create_design.html', context={'form': form})
 
-    if form.is_valid():
-        form.save()
-        return redirect('design')
-
-    return render(request, 'pages/create_design.html', context={'form': form})
+class DesignUpdateView(generic.UpdateView):
+    model = My_design
+    form_class = NewDesignForm
+    template_name = 'pages/create_design.html'
 
 
 def design_delete_view(request, pk):
