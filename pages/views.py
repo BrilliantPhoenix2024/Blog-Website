@@ -1,10 +1,11 @@
 from django.shortcuts import render, redirect, reverse
-from .models import My_design
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
-from .forms import NewDesignForm
 from django.views import generic
 from django.urls import reverse_lazy
+
+from .models import My_design
+from .forms import DesignForm
 
 
 def home_page_view(request):
@@ -18,11 +19,6 @@ def about_page_view(request):
 def contact_page_view(request):
     return render(request, 'pages/contact.html')
 
-#
-# def design_page_view(request):
-#     # designs_list = My_design.objects.all()
-#     designs_list = My_design.objects.filter(status='pub').order_by('-datetime_modified')
-#     return render(request, 'pages/design.html', {'designs_list': designs_list})
 
 class DesignListView(generic.ListView):
     # model = My_design
@@ -33,28 +29,49 @@ class DesignListView(generic.ListView):
         return My_design.objects.filter(status='pub').order_by('-datetime_modified')
 
 
-#
-# def detail_design_page_view(request, pk):
-#     my_design = get_object_or_404(My_design, pk=pk)
-#     return render(request, 'pages/detail_design.html', {'my_design': my_design})
-
 class DesignDetailview(generic.DetailView):
     model = My_design
     template_name = 'pages/detail_design.html'
     context_object_name = 'my_design'
 
 
-#
+class DesignCreateView(generic.CreateView):
+    form_class = DesignForm
+    template_name = 'pages/create_design.html'
+
+
+class DesignUpdateView(generic.UpdateView):
+    model = My_design
+    form_class = DesignForm
+    template_name = 'pages/create_design.html'
+
+
+class DesignDeleteView(generic.DeleteView):
+    model = My_design
+    template_name = 'pages/delete_design.html'
+    success_url = reverse_lazy('design')
+
+# def design_page_view(request):
+#     # designs_list = My_design.objects.all()
+#     designs_list = My_design.objects.filter(status='pub').order_by('-datetime_modified')
+#     return render(request, 'pages/design.html', {'designs_list': designs_list})
+
+
+# def detail_design_page_view(request, pk):
+#     my_design = get_object_or_404(My_design, pk=pk)
+#     return render(request, 'pages/detail_design.html', {'my_design': my_design})
+
+
 # def create_design_page_view(request):
 #     if request.method == 'POST':
-#         form = NewDesignForm(request.POST)
+#         form = DesignForm(request.POST)
 #         if form.is_valid():
 #             form.save()
-#             form = NewDesignForm()
+#             form = DesignForm()
 #             return redirect('design')
 #
 #     else:  # GET request
-#         form = NewDesignForm()
+#         form = DesignForm()
 #
 #     return render(request, 'pages/create_design.html', context={'form': form})
     # if request.method == 'POST':
@@ -67,24 +84,16 @@ class DesignDetailview(generic.DetailView):
     #     print('GET request')
     # return render(request, 'pages/create_design.html')
 
-class DesignCreateView(generic.CreateView):
-    form_class = NewDesignForm
-    template_name = 'pages/create_design.html'
 
 # def design_update_view(request, pk):
 #     design = get_object_or_404(My_design, pk=pk)
-#     form = NewDesignForm(request.POST or None, instance=design)
+#     form = DesignForm(request.POST or None, instance=design)
 #
 #     if form.is_valid():
 #         form.save()
 #         return redirect('design')
 #
 #     return render(request, 'pages/create_design.html', context={'form': form})
-
-class DesignUpdateView(generic.UpdateView):
-    model = My_design
-    form_class = NewDesignForm
-    template_name = 'pages/create_design.html'
 
 
 # def design_delete_view(request, pk):
@@ -95,14 +104,6 @@ class DesignUpdateView(generic.UpdateView):
 #         return redirect('design')
 #
 #     return render(request, 'pages/delete_design.html', context={'design': design})
-
-class DesignDeleteView(generic.DeleteView):
-    model = My_design
-    template_name = 'pages/delete_design.html'
-    success_url = reverse_lazy('design')
-
-
-
 
 
 

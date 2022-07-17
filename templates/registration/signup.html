@@ -21,7 +21,7 @@
             <ul>
                 <li><a href="{% url 'home' %}">HOME</a></li>
                 <li><a href="{% url 'about' %}">ABOUT</a></li>
-                <li><a href="{% url 'services' %}">SERVICE</a></li>
+                <li><a href="{% url 'create_design' %}">CREATE</a></li>
                 <li><a href="{% url 'design' %}">DESIGN</a></li>
                 <li><a href="{% url 'contact' %}">CONTACT</a></li>
             </ul>
@@ -42,12 +42,12 @@
 
     </div>
     {% block content %}
-        <div class="well" style="position: absolute;top: 350px;left: 150px;color: whitesmoke;font-family: Arial;font-size: 20px">
+        <div class="well" style="position: absolute;top: 550px;left: 155px;color: whitesmoke;font-family: Arial;font-size: 20px">
             <H2>THANKS FOR CHOOSING US</H2>
             <br>
             <p>---------------wellcome to our website---------------</p>
         </div>
-        <div class="form" style="position: absolute;top: 50px;left: 910px;color: whitesmoke;font-family: Arial;font-size: 20px">
+        <div class="form" style="position: absolute;top: 290px;left: 130px;color: whitesmoke;font-family: Arial;font-size: 15px">
             <form action="" method="post">
                 {% csrf_token %}
                 {{ form.as_p }}
