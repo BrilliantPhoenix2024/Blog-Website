@@ -3,6 +3,7 @@ from .models import My_design
 from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from .forms import NewDesignForm
+from django.views import generic
 
 
 def home_page_view(request):
@@ -16,11 +17,20 @@ def about_page_view(request):
 def contact_page_view(request):
     return render(request, 'pages/contact.html')
 
+#
+# def design_page_view(request):
+#     # designs_list = My_design.objects.all()
+#     designs_list = My_design.objects.filter(status='pub').order_by('-datetime_modified')
+#     return render(request, 'pages/design.html', {'designs_list': designs_list})
 
-def design_page_view(request):
-    # designs_list = My_design.objects.all()
-    designs_list = My_design.objects.filter(status='pub').order_by('-datetime_modified')
-    return render(request, 'pages/design.html', {'designs_list': designs_list})
+class DesignListView(generic.ListView):
+    # model = My_design
+    template_name = 'pages/design.html'
+    context_object_name = 'designs_list'
+
+    def get_queryset(self):
+        return My_design.objects.filter(status='pub').order_by('-datetime_modified')
+
 
 
 def detail_design_page_view(request, pk):
