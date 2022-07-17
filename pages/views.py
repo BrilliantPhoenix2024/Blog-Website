@@ -43,19 +43,19 @@ class DesignDetailview(generic.DetailView):
     context_object_name = 'my_design'
 
 
-
-def create_design_page_view(request):
-    if request.method == 'POST':
-        form = NewDesignForm(request.POST)
-        if form.is_valid():
-            form.save()
-            form = NewDesignForm()
-            return redirect('design')
-
-    else:  # GET request
-        form = NewDesignForm()
-
-    return render(request, 'pages/create_design.html', context={'form': form})
+#
+# def create_design_page_view(request):
+#     if request.method == 'POST':
+#         form = NewDesignForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             form = NewDesignForm()
+#             return redirect('design')
+#
+#     else:  # GET request
+#         form = NewDesignForm()
+#
+#     return render(request, 'pages/create_design.html', context={'form': form})
     # if request.method == 'POST':
     #     design_title = request.POST.get('title')
     #     design_description = request.POST.get('des')
@@ -65,6 +65,10 @@ def create_design_page_view(request):
     # else:
     #     print('GET request')
     # return render(request, 'pages/create_design.html')
+
+class DesignCreateView(generic.CreateView):
+    form_class = NewDesignForm
+    template_name = 'pages/create_design.html'
 
 def design_update_view(request, pk):
     design = get_object_or_404(My_design, pk=pk)

@@ -1,3 +1,4 @@
+from django.shortcuts import reverse
 from django.db import models
 
 class My_design(models.Model):
@@ -15,3 +16,9 @@ class My_design(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return reverse('detail_design', args=[self.id])
+
+
+
