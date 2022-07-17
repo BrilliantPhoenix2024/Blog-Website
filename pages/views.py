@@ -4,6 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from .forms import NewDesignForm
 from django.views import generic
+from django.urls import reverse_lazy
 
 
 def home_page_view(request):
@@ -86,14 +87,22 @@ class DesignUpdateView(generic.UpdateView):
     template_name = 'pages/create_design.html'
 
 
-def design_delete_view(request, pk):
-    design = get_object_or_404(My_design, pk=pk)
+# def design_delete_view(request, pk):
+#     design = get_object_or_404(My_design, pk=pk)
+#
+#     if request.method == 'POST':
+#         design.delete()
+#         return redirect('design')
+#
+#     return render(request, 'pages/delete_design.html', context={'design': design})
 
-    if request.method == 'POST':
-        design.delete()
-        return redirect('design')
+class DesignDeleteView(generic.DeleteView):
+    model = My_design
+    template_name = 'pages/delete_design.html'
+    success_url = reverse_lazy('design')
 
-    return render(request, 'pages/delete_design.html', context={'design': design})
+
+
 
 
 
