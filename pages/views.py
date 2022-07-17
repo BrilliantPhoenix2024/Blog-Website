@@ -32,10 +32,16 @@ class DesignListView(generic.ListView):
         return My_design.objects.filter(status='pub').order_by('-datetime_modified')
 
 
+#
+# def detail_design_page_view(request, pk):
+#     my_design = get_object_or_404(My_design, pk=pk)
+#     return render(request, 'pages/detail_design.html', {'my_design': my_design})
 
-def detail_design_page_view(request, pk):
-    my_design = get_object_or_404(My_design, pk=pk)
-    return render(request, 'pages/detail_design.html', {'my_design': my_design})
+class DesignDetailview(generic.DetailView):
+    model = My_design
+    template_name = 'pages/detail_design.html'
+    context_object_name = 'my_design'
+
 
 
 def create_design_page_view(request):
