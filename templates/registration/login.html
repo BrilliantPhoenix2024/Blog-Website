@@ -19,10 +19,11 @@
                 <form action="/accounts/login/" method="post">
                     {% csrf_token %}
                     <div>
-                        <label for='username'> Username </label>
-                        <input type='text' name='username' id='username'>
-                        <label for='password'>Password </label>
-                        <input type='password' name='password' id='password'>
+                        {{ form.as_p }}
+{#                        <label for='username'> Username </label>#}
+{#                        <input type='text' name='username' id='username'>#}
+{#                        <label for='password'>Password </label>#}
+{#                        <input type='password' name='password' id='password'>#}
                         <button type="submit" class="button">signup</button>
 {#                        <input type='submit' value='login'>#}
                     </div>
