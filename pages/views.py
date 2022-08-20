@@ -3,9 +3,11 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from django.views import generic
 from django.urls import reverse_lazy
+from django.http import HttpResponse
+from django.core.mail import send_mail, BadHeaderError
 
-from .models import My_design
-from .forms import DesignForm
+from .models import My_design, Contact
+from .forms import DesignForm, ContactForm
 
 
 def home_page_view(request):
@@ -17,7 +19,14 @@ def about_page_view(request):
 
 
 def contact_page_view(request):
-    return render(request, 'pages/contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponse("thanks for contact us")
+    form = ContactForm()
+    context = {'form': form}
+    return render(request, 'pages/contact.html', context)
 
 
 class DesignListView(generic.ListView):
@@ -29,7 +38,7 @@ class DesignListView(generic.ListView):
         return My_design.objects.filter(status='pub').order_by('-datetime_modified')
 
 
-class DesignDetailview(generic.DetailView):
+class DesignDetailView(generic.DetailView):
     model = My_design
     template_name = 'pages/detail_design.html'
     context_object_name = 'my_design'
