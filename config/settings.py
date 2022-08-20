@@ -137,13 +137,6 @@ STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 LOGIN_REDIRECT_URL = 'create_design'
 LOGOUT_REDIRECT_URL = 'home'
 
-
-
-
-
-
-# # media files
-# MEDIA_URL =
-
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 
