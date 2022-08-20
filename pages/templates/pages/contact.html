@@ -1,4 +1,5 @@
 {% extends '_base.html' %}
+{% load crispy_forms_tags %}
 
 
 {% block page_title %}contact page{% endblock page_title %}
@@ -9,16 +10,16 @@
     position: absolute;top: 100px;left: 180px;color: whitesmoke;
     font-size: medium;font-family: Arial;font-weight: bold;
     border: 3px solid goldenrod;border-radius: 8px">
-        <form action="" class="form" method="POST">
+        <form action="" class="form" method="post">
             {% csrf_token %}
-            <label class="name" for="author_name">Enter your name:</label>
-            <input type="text" name="name" class="input">
-            <label class="email" for="email">Enter your Email:</label>
-            <input type="email" name="email" class="input">
-            <label class="comment" for="comment_text">Enter your message:</label>
-            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+            {{ form|crispy }}
+            {#            <label class="name" for="author_name">Enter your name:</label>#}
+            {#            <input type="text" name="name" class="input">#}
+            {#            <label class="email" for="email">Enter your Email:</label>#}
+            {#            <input type="email" name="email" class="input">#}
+            {#            <label class="comment" for="comment_text">Enter your message:</label>#}
+            {#            <textarea name="msg" id="msg" cols="30" rows="10"></textarea>#}
             <input type="submit" value="SEND" id="send">
         </form>
     </div>
-
 {% endblock content %}
