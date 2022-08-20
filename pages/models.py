@@ -21,4 +21,14 @@ class My_design(models.Model):
         return reverse('detail_design', args=[self.id])
 
 
+class Contact(models.Model):
+    name = models.CharField(max_length=200)
+    email = models.EmailField()
+    msg = models.TextField()
+
+    def __str__(self):
+        return self.name
+
+
+
 
