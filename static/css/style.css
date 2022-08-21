@@ -5,16 +5,17 @@
 }
 .main{
     width: 100%;
-    height: 97.5vh;
+    height: 100vh;
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(../img/nightcity.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 .navbar{
-    width: 1200px;
+    width: 80%;
     height: 75px;
     margin: auto;
+    left: -98px;
 }
 .icon{
     width: 200px;
@@ -83,24 +84,29 @@ ul>li>a:hover{
     border: 2px solid goldenrod;
     margin-top: 13px;
     color: whitesmoke;
-    font-size: 15px;
+    font-size: 19px;
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
+    line-height: 20px;
+    font-weight: normal;
 }
 .btn:focus{
     outline: none;
+}
+.btn:hover{
+    background-color: whitesmoke;
+    color: goldenrod;
 }
 .srch:focus{
     outline: none;
 }
 .wel{
-     width: 280px;
+     width: 200px;
      float: left;
-    margin-left: 243px;
+    margin-left: 1190px;
     color: whitesmoke;
     position: absolute;
-    top: 25px;
-    left: 1010px;
+    top: 38px;
     font-size: 14px;
     font-weight: bold;
     font-family: Arial;
@@ -135,17 +141,7 @@ ul>li>a:hover{
     width: 310px;
     height: 230px;
     position: absolute;
-    top: -410px;
-    left: 870px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2)50%, rgba(0, 0, 0, 0.3)50%);
-    border-radius: 10px;
-    padding: 25px;
-}
-.form{
-    width: 310px;
-    height: 230px;
-    position: absolute;
-    top: -390px;
+    top: -480px;
     left: 870px;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2)50%, rgba(0, 0, 0, 0.3)50%);
     border-radius: 10px;
@@ -235,36 +231,32 @@ div>input:focus{
 .social ion-icon:hover{
     color: goldenrod;
 }
-.form{
-    width: 70%;
+.form-contact{
+    width: 90%;
     height: auto;
     position: absolute;
-    top: -10px;
-    left: 20%;
+    top: 110px;
+    left: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0px;
+    margin: 20px 0;
     box-sizing: border-box;
-   /* background-color: black;*/
+    color: whitesmoke;
 }
 .design_form{
-    width: 70%;
-    height: auto;
+    width: 90%;
     position: absolute;
-    top: 90px;
-    left: 15%;
+    top: 110px;
+    left: 5%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 0px;
-    box-sizing: border-box;
-   /* background-color: black;*/
+    color: whitesmoke;
 }
 .input{
     padding: 12px;
-    margin: 15px;
-    width: 50%;
+    width: 70%;
     border: 2px solid goldenrod;
     outline: 1px;
     background-color: transparent;
@@ -300,14 +292,6 @@ div>input:focus{
     font-size: 15px;
 }
 #send{
-    /*padding: 10px;*/
-    /*width: 15%;*/
-    /*margin: 16px;*/
-    /*border: none;*/
-    /*outline: none;*/
-    /*color: black;*/
-    /*font-weight: bold;*/
-    /*border: 1px solid black;*/
     width: 240px;
     height: 40px;
     background-color: goldenrod;
@@ -325,40 +309,12 @@ div>input:focus{
     background-color: whitesmoke;
     color: goldenrod;
 }
-.name{
-    position: absolute;
-    top: 50px;
-    left: 5%;
-}
-.title{
-    position: absolute;
-    top: 50px;
-    left: 5%;
-}
-.email{
-    position: absolute;
-    top: 120px;
-    left: 5%;
-}
-.description{
-    position: absolute;
-    top: 120px;
-    left: 5%;
-    font-size: 14px;
-}
-.comment{
-    position: absolute;
-    top: 193px;
-    left: 5%;
-    font-size: 15px;
-}
 .about{
     width: 1200px;
     height: auto;
     margin: auto;
     color: whitesmoke;
     position: relative;
-    /*float: left;*/
 }
 .about>.p1{
     padding-left: 20px;
@@ -405,3 +361,41 @@ div>input:focus{
     border-radius: 2px;
      font-size: 20px;
 }
+/*.name{*/
+/*    position: absolute;*/
+/*    top: 50px;*/
+/*    left: 5%;*/
+/*}*/
+/*.title{*/
+/*    position: absolute;*/
+/*    top: 50px;*/
+/*    left: 5%;*/
+/*}*/
+/*.email{*/
+/*    position: absolute;*/
+/*    top: 120px;*/
+/*    left: 5%;*/
+/*}*/
+/*.description{*/
+/*    position: absolute;*/
+/*    top: 120px;*/
+/*    left: 5%;*/
+/*    font-size: 14px;*/
+/*}*/
+/*.comment{*/
+/*    position: absolute;*/
+/*    top: 193px;*/
+/*    left: 5%;*/
+/*    font-size: 15px;*/
+/*}*/
+
+/*.form{*/
+/*    width: 310px;*/
+/*    height: 230px;*/
+/*    position: absolute;*/
+/*    top: -390px;*/
+/*    left: 870px;*/
+/*    background: linear-gradient(to top, rgba(0, 0, 0, 0.2)50%, rgba(0, 0, 0, 0.3)50%);*/
+/*    border-radius: 10px;*/
+/*    padding: 25px;*/
+/*}*/
