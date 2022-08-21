@@ -1,25 +1,25 @@
 {% extends '_base.html' %}
+{% load crispy_forms_tags %}
 
 
 {% block page_title %}Create Design{% endblock page_title %}
 {#<h1>{% block page_h1 %}this is contact page{% endblock page_h1 %}</h1>#}
 
 {% block content %}
-    <div class="container" style=" width: 73%;height: 500px;
-    position: absolute;top: 100px;left: 180px;color: whitesmoke;
-    font-size: medium;font-family: Arial;font-weight: bold;
-    border: 3px solid goldenrod;border-radius: 8px">
+{#    <div class="container" style=" width: 73%;height: 500px;#}
+{#    position: absolute;top: 100px;left: 180px;color: whitesmoke;#}
+{#    font-size: medium;font-family: Arial;font-weight: bold;#}
+{#    border: 3px solid goldenrod;border-radius: 8px">#}
         <form action="" class="design_form" method="POST">
             {% csrf_token %}
-            <table>
-                {{ form.as_table }}
-            </table>
+            {{ form|crispy }}
+
 {#            <label class="title" for="author_name">Enter your title:</label>#}
 {#            <input type="text" name="title" class="input">#}
 {#            <label class="description" for="comment_text">Enter your description:</label>#}
 {#            <textarea name="des" id="des" cols="30" rows="10"></textarea>#}
             <input type="submit" value="SEND" id="send">
         </form>
-    </div>
+{#    </div>#}
 
 {% endblock content %}
