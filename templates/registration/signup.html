@@ -1,125 +1,21 @@
+{% extends '_base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{% block page_title %}{% endblock page_title %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
-<body>
+{% block page_title %}SignUp{% endblock page_title %}
 
-<div class="main">
-    <div class="navbar">
-        <div class="icon">
-            <h2 class="logo">CLASSY</h2>
-        </div>
-        <div class="menu">
-            <ul>
-                <li><a href="{% url 'home' %}">HOME</a></li>
-                <li><a href="{% url 'about' %}">ABOUT</a></li>
-                <li><a href="{% url 'create_design' %}">CREATE</a></li>
-                <li><a href="{% url 'design' %}">DESIGN</a></li>
-                <li><a href="{% url 'contact' %}">CONTACT</a></li>
-            </ul>
-        </div>
-        <div class="search">
-            <input class="srch" type="search" placeholder="search">
-            <a href="">
-                <button class="btn">search</button>
-            </a>
-        </div>
-        <div class="wel">
-            {% if user.is_authenticated %}
-                Wellcome {{ user.username }} | <a href="{% url 'logout' %}" style="color: whitesmoke">logout</a>
-            {% else %}
-                <a href="{% url 'login' %}" style="color: whitesmoke;margin-left: 65px;">login</a>
-            {% endif %}
-        </div>
-
-    </div>
     {% block content %}
         <div class="well" style="position: absolute;top: 380px;left: 163px;color: whitesmoke;font-family: Arial;font-size: 20px">
             <H2>THANKS FOR CHOOSING US</H2>
             <br>
             <p>---------------wellcome to our website---------------</p>
         </div>
-        <div class="form" style="position: absolute;top: 280px;left: 800px;color: whitesmoke;font-family: Arial;font-size: 15px;width: 570px">
+        <div class="form" style="position: absolute;top: 170px;left: 800px;color: whitesmoke;
+        font-family: Arial;font-size: 15px;width: 570px">
             <form action="" method="post">
                 {% csrf_token %}
-                {{ form.as_p }}
+                {{ form|crispy }}
                 <button type="submit" class="button">signup</button>
             </form>
         </div>
     {% endblock content %}
-</div>
-
-
-</body>
-</html>
-
-
-{##}
-
-
-{##}
-{#{% block page_title %}signup page{% endblock page_title %}#}
-{#<h1>{% block page_h1 %}this is home page{% endblock page_h1 %}</h1>#}
-
-{#{% block content %}#}
-{#    <div class="main">#}
-{#        <div class="content">#}
-{#            <h1>Web design development</h1>#}
-{#            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>Adipisci recusandae eos suscipit rerum#}
-{#                mollitia#}
-{#                quae <br> corrupti qui excepturi repudiandae officiis at, et <br> provident quam, ipsum necessitatibus#}
-{#                eveniet. <br> Soluta, fugit in.</p>#}
-{##}
-{#            <div class="form">#}
-{#                <H2>LOGIN HERE</H2>#}
-{#                <form action="" method="post">#}
-{#                    {% csrf_token %}#}
-{#                    {{ form.as_p }}#}
-{#                    <button type="submit" class="button">signup</button>#}
-{#                    <div>#}
-{#                        <label for='username'> Username </label>#}
-{#                        <input type='text' name='username' id='username'>#}
-{#                        <label for='password'>Password </label>#}
-{#                        <input type='password' name='password' id='password'>#}
-{#                        <button type="submit" class="button">Login</button>#}
-{#                        <input type='submit' value='login'>#}
-{#                    </div>#}
-{#                </form>#}
-
-{#                <p class="link">Donot have an account#}
-{#                    <br>#}
-{#                    <a class="sgn" href="">SIGN UP</a> HERE</p>#}
-{#                <p class="lwi">Log in with</p>#}
-{##}
-{#                <div class="social">#}
-{#                    <a href="">#}
-{#                        <ion-icon name="logo-facebook"></ion-icon>#}
-{#                    </a>#}
-{#                    <a href="">#}
-{#                        <ion-icon name="logo-instagram"></ion-icon>#}
-{#                    </a>#}
-{#                    <a href="">#}
-{#                        <ion-icon name="logo-twitter"></ion-icon>#}
-{#                    </a>#}
-{#                    <a href="">#}
-{#                        <ion-icon name="logo-google"></ion-icon>#}
-{#                    </a>#}
-{#                    <a href="">#}
-{#                        <ion-icon name="logo-skype"></ion-icon>#}
-{#                    </a>#}
-{#                </div>#}
-{#            </div>#}
-{##}
-{#        </div>#}
-{#        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>#}
-{#    </div>#}
-
-{#{% endblock content %}#}

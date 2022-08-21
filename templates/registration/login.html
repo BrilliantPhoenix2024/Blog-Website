@@ -1,4 +1,5 @@
 {% extends '_base.html' %}
+{% load crispy_forms_tags %}
 
 
 
@@ -19,7 +20,7 @@
                 <form action="/accounts/login/" method="post">
                     {% csrf_token %}
                     <div>
-                        {{ form.as_p }}
+                        {{ form|crispy }}
 {#                        <label for='username'> Username </label>#}
 {#                        <input type='text' name='username' id='username'>#}
 {#                        <label for='password'>Password </label>#}
