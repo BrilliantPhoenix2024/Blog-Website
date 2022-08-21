@@ -2,22 +2,18 @@
 
 
 {% block page_title %}Our design{% endblock page_title %}
-{#<h1>{% block page_h1 %}this my {{ page_name }} page {% endblock page_h1 %}</h1>#}
 
 {% block content %}
- <div class="container" style=" width: 73%;height: auto;
-    position: absolute;top: 100px;left: 180px;color: whitesmoke;
-    font-size: medium;font-family: Arial;font-weight: bold;
-    border: 3px solid goldenrod;border-radius: 8px">
-        {% for design in designs_list %}
-            <div class="card" style="width: auto;height: fit-content;text-align: center;margin: 1%;border: 1px dotted goldenrod;">
-{#                {{ design.id }}#}
-                <h1>{{ design.title }}</h1>
-                <h5>created by: {{ design.author }}</h5>
-                <br>
-                <h5>{{ design.description }}</h5>
-                <a href="{% url 'detail_design' design.id %}"><button type="submit" class="b-read-more" >read more</button></a>
-            </div>
-        {% endfor %}
-    </div>
+    {% for design in designs_list %}
+        <div class="card"
+             style="width: 70%;text-align: center;margin: 1%;border: 1px dotted goldenrod;
+             position: relative;top: -610px;left: 175px;height: 130px">
+            <h5>{{ design.title }}</h5>
+            <h6>created by: {{ design.author }}</h6>
+            <p>{{ design.description }}</p>
+            <a href="{% url 'detail_design' design.id %}">
+                <button type="submit" class="b-read-more">read more</button>
+            </a>
+        </div>
+    {% endfor %}
 {% endblock content %}
