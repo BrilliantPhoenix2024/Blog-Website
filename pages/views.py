@@ -23,7 +23,7 @@ def contact_page_view(request):
         form = ContactForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponse("thanks for contact us")
+            return HttpResponse("<h1>Thanks for contact us</h1>")
     form = ContactForm()
     context = {'form': form}
     return render(request, 'pages/contact.html', context)
