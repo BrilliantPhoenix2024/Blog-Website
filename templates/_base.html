@@ -39,7 +39,7 @@
             {% if user.is_authenticated %}
                 Wellcome {{ user.username }} | <a href="{% url 'logout' %}" style="color: whitesmoke">logout</a>
             {% else %}
-                <a href="{% url 'login' %}" style="color: whitesmoke;margin-left: 65px;">login</a>
+                <a href="{% url 'login' %}" style="color: whitesmoke;margin-left: 10px;">login</a>
             {% endif %}
         </div>
 
