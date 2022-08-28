@@ -1,6 +1,6 @@
 What is this project?
 
-# Web_page-Backend repository is a sample of a tutorial course with use of my Back-end knowlege
+# Blog-Website1 repository is a sample of a tutorial course with use of my Back-end knowlege
 
 challenges that i deal with:
 
